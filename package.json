@@ -1,0 +1,76 @@
+{
+  "name": "nestjs-super-mongodb",
+  "version": "1.0.0",
+  "description": "MongoDB NestJS",
+  "repository": "https://github.com/agent-ly/nestjs-super-mongodb",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": "./dist/main/mod.js",
+    "./socket.io": "./dist/socket.io/mod.js",
+    "./triggers": "./dist/triggers/mod.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "vitest",
+    "build:clean": "rm -rf dist",
+    "build:compile": "tsc -p tsconfig.build.json",
+    "build": "pnpm build:clean && pnpm build:compile",
+    "prepack": "pnpm build"
+  },
+  "dependencies": {
+    "nestjs-recipes": "^1.0.2"
+  },
+  "devDependencies": {
+    "@nestjs/common": "^9.4.0",
+    "@nestjs/core": "^9.4.0",
+    "@nestjs/platform-express": "^9.4.0",
+    "@nestjs/platform-socket.io": "^9.4.0",
+    "@nestjs/testing": "^9.4.0",
+    "@nestjs/websockets": "^9.4.0",
+    "@socket.io/mongo-adapter": "^0.3.0",
+    "@socket.io/mongo-emitter": "^0.1.0",
+    "mongodb": "^5.2.0",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.8.0",
+    "socket.io": "^4.6.1",
+    "socket.io-adapter": "^2.5.2",
+    "typescript": "^5.0.4",
+    "vitest": "^0.30.1"
+  },
+  "peerDependencies": {
+    "@nestjs/common": "^9.0.0",
+    "@nestjs/core": "^9.0.0",
+    "@nestjs/platform-socket.io": "^9.0.0",
+    "@nestjs/websockets": "^9.0.0",
+    "@socket.io/mongo-adapter": "^0.3.0",
+    "@socket.io/mongo-emitter": "^0.1.0",
+    "mongodb": "^5.0.0",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.8.0",
+    "socket.io": "^4.6.1",
+    "socket.io-adapter": "^2.5.2"
+  },
+  "peerDependenciesMeta": {
+    "@nestjs/websockets": {
+      "optional": true
+    },
+    "@nestjs/platform-socket.io": {
+      "optional": true
+    },
+    "@socket.io/mongo-adapter": {
+      "optional": true
+    },
+    "@socket.io/mongo-emitter": {
+      "optional": true
+    },
+    "socket.io": {
+      "optional": true
+    },
+    "socket.io-adapter": {
+      "optional": true
+    }
+  }
+}
