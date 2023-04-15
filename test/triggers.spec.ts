@@ -1,4 +1,4 @@
-import { Test, TestingModule } from "@nestjs/testing";
+import { Test, type TestingModule } from "@nestjs/testing";
 import { describe, expect, it, beforeAll, afterAll } from "vitest";
 import { MongoModule } from "../dist/main/mod.js";
 import {
