@@ -1,6 +1,6 @@
 {
   "name": "nestjs-super-mongodb",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "MongoDB NestJS",
   "repository": "https://github.com/agent-ly/nestjs-super-mongodb",
   "license": "MIT",

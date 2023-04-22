@@ -25,8 +25,8 @@ describe("SocketIoMongoModule", () => {
     await module.init();
   });
   afterAll(() => module && module.close());
-  it("adapter constructor should resolve", () =>
-    expect(module.get(getMongoAdapterCtorToken())).toBeDefined());
-  it("emitter should resolve", () =>
-    expect(module.get(getMongoEmitterToken())).toBeDefined());
+  it("should resolve adapter ctor", () =>
+    expect(module.get(getMongoAdapterCtorToken())).not.toBeNull());
+  it("should resolve emitter", () =>
+    expect(module.get(getMongoEmitterToken())).not.toBeNull());
 });

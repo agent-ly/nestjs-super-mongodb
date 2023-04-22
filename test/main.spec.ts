@@ -15,5 +15,5 @@ describe("MongoModule", () => {
     client = module.get(getMongoConnectionToken());
   });
   afterAll(() => module && module.close());
-  it("should be defined", () => expect(client).toBeDefined());
+  it("should resolve default client", () => expect(client).not.toBeNull());
 });

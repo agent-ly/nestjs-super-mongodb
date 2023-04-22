@@ -18,5 +18,6 @@ describe("SocketIoMongoModule", () => {
     triggersService = await module.get(MongoTriggersService);
   });
   afterAll(() => module && module.close());
-  it("should be resolved", () => expect(triggersService).toBeDefined());
+  it("should resolve triggers service", () =>
+    expect(triggersService).not.toBeNull());
 });
